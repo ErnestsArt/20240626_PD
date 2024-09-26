@@ -3,11 +3,12 @@
 class Task {
     private $id;
     private $title;
+    private $description; //nebija mainīgais
 
     public function __construct($id, $title) {
         $this->id = $id;
         $this->title = $title;
-        $this->description = $description;
+        $this->description = $description;// private 
     }
 
     public function setTitle($title) {
@@ -26,7 +27,7 @@ class Task {
     }
 }
 
-$tasks = [];
+$tasks = [];//nav tasku ievadīti
 
 function displayAllTasks($tasks) {
     if (empty($tasks)) {
@@ -76,7 +77,7 @@ function deleteTask(&$tasks) {
 }
 
 while (true) {
-    echo "\nToDo List CLI Application\n";
+    echo "\nToDo List CLI Application\n";//izvadīšana ir saplēsta
     echo "1. Create Task\n";
     echo "2. View All Tasks\n";
     echo "3. Update Task\n";
